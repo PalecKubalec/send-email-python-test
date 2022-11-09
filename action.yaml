@@ -12,4 +12,5 @@ runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
-    - ${{ inputs.secret_pass }} ${{ inputs.secret_mail }}
+    - ${{ inputs.secret_pass }}
+    - ${{ inputs.secret_mail }}
