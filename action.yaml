@@ -1,7 +1,6 @@
 # action.yml
 name: 'Send Email'
 description: 'Sends email'
-outputs:
 runs:
   using: 'docker'
   image: 'Dockerfile'
