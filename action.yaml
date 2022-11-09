@@ -1,0 +1,9 @@
+# action.yml
+name: 'Send Email'
+description: 'Sends email'
+outputs:
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ secrets.MAIL_PASS }} ${{ secrets.GMAIL_ADDRESS }}
