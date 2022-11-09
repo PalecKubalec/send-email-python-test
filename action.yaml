@@ -1,8 +1,15 @@
 # action.yml
 name: 'Send Email'
 description: 'Sends email'
+inputs:
+  secret_pass:
+    description: "..."
+    required: true
+  secret_mail:
+    description: "..."
+    required: true
 runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
-    - ${{ secrets.MAIL_PASS }} ${{ secrets.GMAIL_ADDRESS }}
+    - ${{ inputs.secret_pass }} ${{ inputs.secret_mail }}
