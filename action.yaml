@@ -11,8 +11,5 @@ inputs:
 runs:
   using: 'docker'
   image: 'Dockerfile'
-  env:
-    SECRET_PASS: ${{ inputs.secret_pass }}
-    SECRET_MAIL: ${{ inputs.secret_mail }}
   args:
-    - ${{ envs.SECRET_PASS }} ${{ env.SECRET_MAIL }}
+    - ${{ inputs.secret_pass }} ${{ inputs.secret_mail }}
